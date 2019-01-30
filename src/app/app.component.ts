@@ -1,3 +1,9 @@
+import { LoginPage } from './../pages/login/login';
+import { GaleriePage } from './../pages/galerie/galerie';
+import { ContactPage } from './../pages/contact/contact';
+import { ConseilPage } from './../pages/conseil/conseil';
+import { CguPage } from './../pages/cgu/cgu';
+import { AbonnementPage } from './../pages/abonnement/abonnement';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -5,6 +11,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { IntroPage } from '../pages/intro/intro';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { FlyerPage } from '../pages/flyer/flyer';
+import { ParamètresPage } from '../pages/paramètres/paramètres';
+import { StatsPage } from '../pages/stats/stats';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +31,17 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'List', component: ListPage },
+      { title: 'Intro', component: IntroPage },
+      { title: 'Abonnement', component: AbonnementPage },
+      { title: 'CGU', component: CguPage },
+      { title: 'Conseil', component: ConseilPage },
+      { title: 'Contact', component: ContactPage },
+      { title: 'Flyer', component: FlyerPage },
+      { title: 'Galerie', component: GaleriePage },
+      { title: 'Login', component: LoginPage },
+      { title: 'Paramètres', component: ParamètresPage },
+      { title: 'Stats', component: StatsPage },
     ];
 
   }
