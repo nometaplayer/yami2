@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -9,13 +10,17 @@ import { IntroPage } from '../pages/intro/intro';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { RegisterPage } from '../pages/register/register';
+import { registerLocaleData } from '@angular/common';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    IntroPage
+    IntroPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    IntroPage
+    IntroPage,
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

@@ -1,24 +1,28 @@
+import { HomePage } from './../home/home';
+import { RegisterPage } from './../register/register';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
 })
 export class LoginPage {
 
+  username:string;
+  password:string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  login(){
+    console.log("Username: "+ this.username);
+    console.log("Password: "+ this.password);
+
+    this.navCtrl.push(HomePage);
+  }
+
+  goRegister(){
+    this.navCtrl.push(RegisterPage);
   }
 
 }
