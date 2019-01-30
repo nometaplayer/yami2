@@ -4,12 +4,6 @@ import { IntroPage } from '../intro/intro';
 import { CguPage } from '../cgu/cgu';
 import { NotificationPage } from '../notification/notification';
 
-/**
- * Generated class for the ParamètresPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-paramètres',

@@ -14,5 +14,36 @@
 
 
 <ion-content padding>
+    <ion-list>
+      <ion-item (click)="setpage(0)">
+          <h2>Revoir le TUTORIEL</h2>
+          <button (click)="setpage(0)" ion-button clear item-end>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-item>
+
+        <ion-item (click)="setpage(1)">
+            <h2>Mentions Légales</h2>
+            <button (click)="setpage(1)" ion-button clear item-end>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </ion-item>
+
+      <ion-item (click)="setpage(2)">
+          <h2>Notifications</h2>
+
+          <button (click)="setpage(2)" ion-button clear item-end>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </button>
+        </ion-item>
+
+        <ion-item (click)="setpage(3)">
+            <h2>Ajouter parametre????</h2>
+            <button (click)="setpage(3)" ion-button clear item-end>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </ion-item>    
+
+    </ion-list>
 
 </ion-content>
