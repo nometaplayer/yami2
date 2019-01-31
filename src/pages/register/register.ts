@@ -21,7 +21,9 @@ export class RegisterPage {
 
   register(){
     if(this.username.length==0 || this.password.length==0 || this.repassword.length==0)
-    alert("Veuillez remplir tout les champs");
+    alert("Veuillez remplir tout les champs.");
+    if(this.password.length != this.repassword.length)
+    alert("Le mot de passe est différent avec ça confirmation.");
   }
 
 }
