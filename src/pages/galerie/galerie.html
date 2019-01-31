@@ -17,7 +17,7 @@
   <ion-list>
     <ion-item-sliding >
       <ion-card>
-        <ion-item class="activated">
+        <ion-item *ngFor="let recette of recetteList" (click)="onLoadRecette(recette.name)">
           <ion-icon name="chocolatpoire"></ion-icon>
           <ion-label>Gateau chocolat-Poire</ion-label>
         </ion-item>
