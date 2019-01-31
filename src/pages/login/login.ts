@@ -44,7 +44,22 @@ export class LoginPage {
       .catch(e => console.log('Error logging into Facebook', e));
   }
 
+  logout() {
+    this.fb.logout()
+    .then( res => this.isLoggedIn = false)
+    .catch(e => console.log('Error logout from Facebook', e));
+  }
 
+  getUserDetail(userid) {
+    this.fb.api("/"+userid+"/?fields=id,email,name,picture,gender",["public_profile"])
+      .then(res => {
+        console.log(res);
+        this.users = res;
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
 
   login(){
     console.log("Username: "+ this.username);
