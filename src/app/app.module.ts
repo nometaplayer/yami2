@@ -12,6 +12,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterPage } from '../pages/register/register';
 import { registerLocaleData } from '@angular/common';
+
+import { AbonnementPage } from '../pages/abonnement/abonnement';
+import { CguPage } from '../pages/cgu/cgu';
+import { ConseilPage } from '../pages/conseil/conseil';
+import { ContactPage } from '../pages/contact/contact';
+import { FlyerPage } from '../pages/flyer/flyer';
+import { GaleriePage } from '../pages/galerie/galerie';
+import { NotificationPage } from '../pages/notification/notification';
+import { ParamètresPage } from '../pages/paramètres/paramètres';
+import { StatsPage } from '../pages/stats/stats';
+
 import { Facebook } from '@ionic-native/facebook';
 
 @NgModule({
@@ -21,7 +32,17 @@ import { Facebook } from '@ionic-native/facebook';
     ListPage,
     IntroPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    AbonnementPage,
+    CguPage,
+    ConseilPage,
+    ContactPage,
+    FlyerPage,
+    GaleriePage,
+    HomePage,
+    NotificationPage,
+    ParamètresPage,
+    StatsPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +55,17 @@ import { Facebook } from '@ionic-native/facebook';
     ListPage,
     IntroPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    AbonnementPage,
+    CguPage,
+    ConseilPage,
+    ContactPage,
+    FlyerPage,
+    GaleriePage,
+    HomePage,
+    NotificationPage,
+    ParamètresPage,
+    StatsPage
   ],
   providers: [
     StatusBar,

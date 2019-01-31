@@ -11,6 +11,7 @@ import { NotificationPage } from '../notification/notification';
 })
 export class ParamètresPage {
   event: string;
+  num: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
