@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterPage } from '../pages/register/register';
 import { registerLocaleData } from '@angular/common';
+import { Facebook } from '@ionic-native/facebook';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { registerLocaleData } from '@angular/common';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

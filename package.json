@@ -37,5 +37,13 @@
     "@ionic/app-scripts": "3.2.1",
     "typescript": "~2.6.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-facebook4": {
+        "APP_ID": "1497690080503429",
+        "APP_NAME": "ItsOpen"
+      }
+    }
+  }
 }
