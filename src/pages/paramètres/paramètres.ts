@@ -10,6 +10,7 @@ import { NotificationPage } from '../notification/notification';
   templateUrl: 'paramètres.html',
 })
 export class ParamètresPage {
+  event: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -24,5 +25,12 @@ export class ParamètresPage {
     if(num==2)this.navCtrl.push(NotificationPage);
 
   }
+  doRefresh(event){
+    console.log('Begin async operation');
 
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
+  }
 }

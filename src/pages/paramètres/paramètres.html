@@ -14,6 +14,16 @@
 
 
 <ion-content padding>
+    <ion-content>
+      <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
+    </ion-content>
     <ion-list>
       <ion-item (click)="setpage(0)">
           <h2>Revoir le TUTORIEL</h2>
