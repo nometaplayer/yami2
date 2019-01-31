@@ -12,6 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterPage } from '../pages/register/register';
 import { registerLocaleData } from '@angular/common';
+
 import { AbonnementPage } from '../pages/abonnement/abonnement';
 import { CguPage } from '../pages/cgu/cgu';
 import { ConseilPage } from '../pages/conseil/conseil';
@@ -21,6 +22,8 @@ import { GaleriePage } from '../pages/galerie/galerie';
 import { NotificationPage } from '../pages/notification/notification';
 import { ParamètresPage } from '../pages/paramètres/paramètres';
 import { StatsPage } from '../pages/stats/stats';
+
+import { Facebook } from '@ionic-native/facebook';
 
 @NgModule({
   declarations: [
@@ -67,6 +70,7 @@ import { StatsPage } from '../pages/stats/stats';
   providers: [
     StatusBar,
     SplashScreen,
+    Facebook,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
