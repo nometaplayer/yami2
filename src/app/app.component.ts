@@ -12,7 +12,7 @@ import { IntroPage } from '../pages/intro/intro';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { FlyerPage } from '../pages/flyer/flyer';
-import { ParamètresPage } from '../pages/paramètres/paramètres';
+import { ParametresPage } from '../pages/parametres/parametres';
 import { StatsPage } from '../pages/stats/stats';
 
 @Component({
@@ -40,7 +40,7 @@ export class MyApp {
       { title: 'Flyer', component: FlyerPage },
       { title: 'Galerie', component: GaleriePage },
       { title: 'Login', component: LoginPage },
-      { title: 'Paramètres', component: ParamètresPage },
+      { title: 'Parametres', component: ParametresPage },
       { title: 'Stats', component: StatsPage },
     ];
 
