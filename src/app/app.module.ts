@@ -24,6 +24,7 @@ import { ParamètresPage } from '../pages/paramètres/paramètres';
 import { StatsPage } from '../pages/stats/stats';
 
 import { Facebook } from '@ionic-native/facebook';
+import { RecetteService } from '../pages/services/recette.services';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { Facebook } from '@ionic-native/facebook';
     StatusBar,
     SplashScreen,
     Facebook,
+    RecetteService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

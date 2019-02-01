@@ -1,29 +1,78 @@
-<ion-header>
-
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>galerie</ion-title>
+    <ion-buttons start >
+        <button ion-button icon-only (click)="onToggleMenu()">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button clear (click)="dismiss()" >Fermer</button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
-
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding>
       <ion-item>
         <ion-label>Recette</ion-label>
       </ion-item>
       <ion-item >
         <ion-card>
-          <ion-slides>
-            <ion-item *ngFor="let recette of recetteList" (click)="onLoadRecette(recette.name)">
-              {{ recette.name }}
-              <img src="../../assets/imgs/logo.png">
-            </ion-item>
-          </ion-slides>
+            <ion-slides>
+              <ion-slide *ngFor="let recette of recetteList" (click)="onLoadRecette(recette.name)">
+                    {{ recette.name }}
+                  <img src="../../assets/imgs/logo.png">
+              </ion-slide>
+            </ion-slides>
         </ion-card>
       </ion-item>
-    </ion-item-sliding>
   </ion-list>
-
-</ion-content>
+</ion-content> -->
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Galerie
+      </ion-title>
+      <ion-buttons start >
+        <button ion-button icon-only (click)="onToggleMenu()">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <button ion-button icon-only (click)="openRecette()">
+          <ion-badge *ngIf="recette.length > 0">{{ recette.length }}</ion-badge>
+          <ion-icon slot="icon-only" name="recette"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+   
+  <ion-content>
+    <div *ngFor="let cat of items" class="category-block">
+   
+      <ion-row no-padding class="category-banner">
+        <ion-col text-left button tappable (click)="cat.expanded = !cat.expanded" align-self-center>
+          {{ cat.category }}
+        </ion-col>
+      </ion-row>
+   
+      <ion-slides >
+        <ion-slide *ngFor="let product of cat.products">
+          <div *ngIf="cat.expanded">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                  {{ product.name }} - ${{ product.description }}
+                </ion-card-title>
+                <ion-card-content>
+                  <img src="https://via.placeholder.com/300x300">
+                  <button expand="full" (click)="addToRecette(product)">Add to Recette</button>
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+          </div>
+        </ion-slide>
+      </ion-slides>
+   
+    </div>
+  </ion-content>
