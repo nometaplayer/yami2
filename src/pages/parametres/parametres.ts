@@ -6,10 +6,10 @@ import { NotificationPage } from '../notification/notification';
 
 
 @Component({
-  selector: 'page-paramètres',
-  templateUrl: 'paramètres.html',
+  selector: 'page-parametres',
+  templateUrl: 'parametres.html',
 })
-export class ParamètresPage {
+export class ParametresPage {
   event: string;
   num: string;
 
@@ -19,7 +19,7 @@ export class ParamètresPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ParamètresPage');
+    console.log('ionViewDidLoad ParametresPage');
   }
 
   setpage(num){

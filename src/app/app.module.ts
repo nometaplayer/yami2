@@ -11,7 +11,7 @@ import { IntroPage } from '../pages/intro/intro';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterPage } from '../pages/register/register';
-import { registerLocaleData } from '@angular/common';
+
 
 import { AbonnementPage } from '../pages/abonnement/abonnement';
 import { CguPage } from '../pages/cgu/cgu';
@@ -20,7 +20,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { FlyerPage } from '../pages/flyer/flyer';
 import { GaleriePage } from '../pages/galerie/galerie';
 import { NotificationPage } from '../pages/notification/notification';
-import { ParamètresPage } from '../pages/paramètres/paramètres';
+import { ParametresPage } from '../pages/parametres/parametres';
 import { StatsPage } from '../pages/stats/stats';
 
 import { Facebook } from '@ionic-native/facebook';
@@ -42,7 +42,7 @@ import { RecetteService } from '../pages/services/recette.services';
     GaleriePage,
     HomePage,
     NotificationPage,
-    ParamètresPage,
+    ParametresPage,
     StatsPage
   ],
   imports: [
@@ -65,7 +65,7 @@ import { RecetteService } from '../pages/services/recette.services';
     GaleriePage,
     HomePage,
     NotificationPage,
-    ParamètresPage,
+    ParametresPage,
     StatsPage
   ],
   providers: [
