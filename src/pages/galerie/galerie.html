@@ -16,24 +16,16 @@
 <ion-content padding>
   <ion-list>
     <ion-item-sliding >
-      <ion-card>
-        <ion-item *ngFor="let recette of recetteList" (click)="onLoadRecette(recette.name)">
-          <ion-icon name="chocolatpoire"></ion-icon>
-          <ion-label>Gateau chocolat-Poire</ion-label>
-        </ion-item>
-        <ion-item class="activated">
-          <ion-icon name="crepe"></ion-icon>
-          <ion-label>Crepe</ion-label>
-        </ion-item>
-        <ion-item class="noactivated">
-          <ion-icon name="tartecitron"></ion-icon>
-          <ion-label>Tarte citron</ion-label>
-        </ion-item>
-        <ion-item class="noactivated">
-          <ion-icon name="moussechoco"></ion-icon>
-          <ion-label>Mousse chocolat</ion-label>
-        </ion-item>
-      </ion-card>>
+      <ion-item>
+        <ion-label>Recette</ion-label>
+      </ion-item>
+      <ion-item >
+        <ion-card>
+          <ion-item *ngFor="let recette of recetteList" (click)="onLoadRecette(recette.name)">
+            {{ recette.name }}
+          </ion-item>
+        </ion-card>
+      </ion-item>
     </ion-item-sliding>
   </ion-list>
 

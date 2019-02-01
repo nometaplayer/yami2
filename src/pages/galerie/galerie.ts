@@ -47,5 +47,8 @@ export class GaleriePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad GaleriePage');
   }
+  onLoadRecette(recette: {name: string, description: string}) {
+    this.navCtrl.push(GaleriePage, {recette: recette});
+  }
 
 }
