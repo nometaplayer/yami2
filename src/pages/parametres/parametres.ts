@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { IntroPage } from '../intro/intro';
 import { CguPage } from '../cgu/cgu';
 import { NotificationPage } from '../notification/notification';
@@ -13,7 +13,9 @@ export class ParametresPage {
   event: string;
   num: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
@@ -33,5 +35,8 @@ export class ParametresPage {
       console.log('Async operation has ended');
       event.target.complete();
     }, 2000);
+  }
+  onToggleMenu() {
+    this.menuCtrl.open();
   }
 }

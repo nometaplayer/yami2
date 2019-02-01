@@ -1,54 +1,54 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, OnInit } from '@angular/core';
+import { NavController, NavParams, MenuController, ViewController } from 'ionic-angular';
 
-import { Recette } from '../../models/Recette';
-import { Subject } from 'rxjs/Subject';
-
+import { RecettePage } from './recette/recette';
+import { RecetteService } from '../services/recette.services';
 
 
 @Component({
   selector: 'page-galerie',
   templateUrl: 'galerie.html',
 })
-export class GaleriePage {
+export class GaleriePage implements OnInit {
 
-  recette$ = new Subject<Recette[]>();
-  recetteList: Recette[]=[
-    {
-      name: 'Gâteau au chocolat-poire',
-      description: 'Il y a du chocolat et de la poire',
-      isOn: true,
-      image:'logo.png'
-    },
-    {
-      name: 'Crèpe Bretonne',
-      description: 'Une bonne crèpe traditionnelle',
-      isOn: true,
-      image:'logo.png'
-    },
-    {
-      name: 'Tarte au citron',
-      description: 'La tarte au citron comme on l\'aime',
-      isOn: true,
-      image:'logo.png'
-    },
-    {
-      name: 'Mousse au chocolat',
-      description: 'Bien épaisse, c\'est cool',
-      isOn: true,
-      image:'logo.png'
-    }
-  ]
+  recette=[];
+  items=[];
+
+  sliderConfig={
+    slidesPerView: 1.6,
+    spaceBetwween: 10,
+    centeredSlides: true
+  }
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private menuCtrl: MenuController,
+              public viewCtrl: ViewController,
+              private recetteService: RecetteService) {
+  }
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  ngOnInit(){
+    this.items = this.recetteService.getProducts();
+    this.recette = this.recetteService.getRecette();
+  }
+  addToRecette(product){
+    this.recetteService.addProduct(product);
+  }
+  openRecette(){
+    this.navCtrl.push('Recette');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GaleriePage');
   }
   onLoadRecette(recette: {name: string, description: string}) {
-    this.navCtrl.push(GaleriePage, {recette: recette});
+    this.navCtrl.push(RecettePage, {recette: recette});
+  }
+  onToggleMenu() {
+    this.menuCtrl.open();
+  }
+  dismiss(){
+    this.viewCtrl.dismiss();
   }
 
 }
