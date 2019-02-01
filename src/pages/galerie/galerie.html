@@ -38,11 +38,8 @@
           <ion-icon name="menu"></ion-icon>
         </button>
       </ion-buttons>
-      <ion-buttons slot="end">
-        <button ion-button icon-only (click)="openRecette()">
-          <ion-badge *ngIf="recette.length > 0">{{ recette.length }}</ion-badge>
-          <ion-icon slot="icon-only" name="recette"></ion-icon>
-        </button>
+      <ion-buttons end slot="end">
+        <button ion-button clear (click)="dismiss()">Fermer</button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
