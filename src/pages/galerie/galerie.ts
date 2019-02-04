@@ -11,6 +11,8 @@ import { RecetteService } from '../services/recette.services';
 })
 export class GaleriePage implements OnInit {
 
+  recettePage= RecettePage;
+
   recette=[];
   items=[];
 
@@ -37,7 +39,6 @@ export class GaleriePage implements OnInit {
   openRecette(){
     this.navCtrl.push('Recette');
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad GaleriePage');
   }
@@ -50,5 +51,4 @@ export class GaleriePage implements OnInit {
   dismiss(){
     this.viewCtrl.dismiss();
   }
-
 }

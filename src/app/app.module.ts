@@ -23,6 +23,7 @@ import { ParametresPage } from '../pages/parametres/parametres';
 import { StatsPage } from '../pages/stats/stats';
 import { Facebook } from '@ionic-native/facebook';
 import { RecetteService } from '../pages/services/recette.services';
+import { RecettePage } from '../pages/galerie/recette/recette';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { RecetteService } from '../pages/services/recette.services';
     NotificationPage,
     ParametresPage,
     StatsPage,
+    RecettePage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { RecetteService } from '../pages/services/recette.services';
     HomePage,
     NotificationPage,
     ParametresPage,
-    StatsPage
+    StatsPage,
+    RecettePage
   ],
   providers: [
     StatusBar,
