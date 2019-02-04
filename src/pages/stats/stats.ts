@@ -26,8 +26,8 @@ export class StatsPage {
   onToggleMenu() {
     this.menuCtrl.open();
   }
-  //randomStat() {
-    //let rs = Math.floor(Math.random() * this.stats.length);
-    //this.randomStats = [this.stats[rs]];
-  //}
+  randomStat() {
+    let rs = Math.floor(Math.random() * this.stats.length);
+    this.randomStats = [this.stats[rs]];
+  }
 }
