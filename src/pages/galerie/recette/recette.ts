@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavParams, NavController } from 'ionic-angular';
-import { HomePage } from '../../home/home';
+import { NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-recette',
@@ -13,14 +12,9 @@ export class RecettePage implements OnInit {
     description: string
   }
 
-  constructor(public navParams: NavParams,
-              public navCtrl: NavController) { }
+  constructor(public navParams: NavParams) { }
   
   ngOnInit(){
     this.recette = this.navParams.get('recette');
-
-  }
-  goToHome(){
-    this.navCtrl.setRoot(HomePage);
   }
 }
