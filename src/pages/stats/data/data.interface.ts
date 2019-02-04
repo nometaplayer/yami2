@@ -1,4 +1,4 @@
-export interface Stats {
+export interface Stat {
     id : string;
     titre : string;
     description : string;

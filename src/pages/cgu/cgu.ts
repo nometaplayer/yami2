@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 
-/**
- * Generated class for the CguPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-cgu',
@@ -14,11 +8,14 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CguPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl : MenuController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CguPage');
   }
 
+  onToggleMenu() {
+    this.menuCtrl.open();
+  }
 }

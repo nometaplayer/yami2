@@ -1,4 +1,4 @@
-import { Stats } from './data/data.interface';
+import { Stat } from './data/data.interface';
 import { Component } from '@angular/core';
 import { NavController, NavParams, MenuController } from 'ionic-angular';
 import stats from "./data/data"

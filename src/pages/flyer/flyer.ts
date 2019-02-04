@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the FlyerPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-flyer',
@@ -14,11 +7,14 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class FlyerPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FlyerPage');
   }
 
+  onToggleMenu() {
+    this.menuCtrl.open();
+  }
 }
