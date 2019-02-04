@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RecetteService } from '../../services/recette.services';
 import { NavParams } from 'ionic-angular';
 
 
@@ -9,13 +8,15 @@ import { NavParams } from 'ionic-angular';
 })
 export class RecettePage implements OnInit {
 
-  name: string;
+  recette: {
+    name: string,
+    description: string
+  }
 
-  constructor(public recetteService: RecetteService,
-              public navParams: NavParams) { }
+  constructor(public navParams: NavParams) { }
   
   ngOnInit(){
-    this.name = this.navParams.get('recetteName');
+    this.recette = this.navParams.get('recette');
 
   }
 }

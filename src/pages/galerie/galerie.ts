@@ -11,6 +11,8 @@ import { RecetteService } from '../services/recette.services';
 })
 export class GaleriePage implements OnInit {
 
+  recettePage= RecettePage;
+
   recette=[];
   items=[];
 

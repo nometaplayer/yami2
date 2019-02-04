@@ -8,18 +8,10 @@
 
 
 <ion-content padding>
-  <!-- <ion-card>
+  <ion-card>
     <ion-card-header>{{ recette.name }}</ion-card-header>
     <ion-card-content>
-      <p *ngFor="let line of recette.description">{{ line }}</p>
+      {{ recette.description }}
     </ion-card-content>
-  </ion-card> -->
-  <ion-card-header>{{ recette.name }}</ion-card-header>
-  <ion-card-content>
-    <p *ngFor="let line of appareil.description">{{ line }}</p>
-  </ion-card-content>
-  <ion-grid no padding>
-    {{ recette.name }}
-  </ion-grid>
-
+  </ion-card>
 </ion-content>
