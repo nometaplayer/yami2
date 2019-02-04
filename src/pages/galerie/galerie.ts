@@ -3,6 +3,7 @@ import { NavController, NavParams, MenuController, ViewController } from 'ionic-
 
 import { RecettePage } from './recette/recette';
 import { RecetteService } from '../services/recette.services';
+import { HomePage } from '../home/home';
 
 
 @Component({
@@ -48,7 +49,7 @@ export class GaleriePage implements OnInit {
   onToggleMenu() {
     this.menuCtrl.open();
   }
-  dismiss(){
-    this.viewCtrl.dismiss();
+  goToHome(){
+    this.navCtrl.setRoot(HomePage);
   }
 }
