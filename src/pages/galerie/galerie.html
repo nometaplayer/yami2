@@ -31,7 +31,7 @@
 <ion-header>
     <ion-toolbar>
       <ion-title>
-        Galerie
+          Galerie
       </ion-title>
       <ion-buttons start >
         <button ion-button icon-only (click)="onToggleMenu()">
@@ -55,17 +55,24 @@
    
       <ion-slides >
         <ion-slide *ngFor="let product of cat.products">
-          <div *ngIf="cat.expanded">
+          <div *ngIf="cat.expanded" length>
             <ion-card>
-              <ion-card-header>
-                <ion-card-title>
-                  {{ product.name }} - ${{ product.description }}
-                </ion-card-title>
-                <ion-card-content>
-                  <img src="https://via.placeholder.com/300x300">
-                  <button expand="full" (click)="addToRecette(product)">Add to Recette</button>
-                </ion-card-content>
-              </ion-card-header>
+              <ion-row>
+                <ion-col>
+                  <ion-card-header>
+                    <ion-card-title>
+                      <h1>{{ product.name }}</h1>
+                    </ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <img src="https://via.placeholder.com/300x300">
+                    <h5>
+                      {{ product.description }} <br/>
+                      <button expand="full" (click)="onLoadRecette(product)">Voir la recette !</button>
+                    </h5>
+                  </ion-card-content>
+                </ion-col>
+              </ion-row>
             </ion-card>
           </div>
         </ion-slide>
