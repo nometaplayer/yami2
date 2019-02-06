@@ -8,49 +8,71 @@
 </ion-header>
 
 <ion-content padding style="background:#56a3da !important;">
-<ion-card>
- <ion-card-content>
-  <p>Votre sexe est :</p>
-  <p>___________________________ </p>
-  <ion-icon name="female"></ion-icon>
-  <ion-checkbox color="primary"></ion-checkbox>
-  <ion-icon name="male"></ion-icon>
-  <ion-checkbox color="primary"></ion-checkbox>
-  <p>___________________________ </p>
- </ion-card-content>
-</ion-card>
-<ion-card>
-<ion-card-content>
- <p>Indiquez votre âge</p>
-
- <label type="text"><textarea placeholder="Votre âge"></textarea></label>
-</ion-card-content>
-</ion-card>
-<ion-card>
-    <ion-card-content>
-     <p>Indiquez votre taille</p>
-    
-     <label type="text"><textarea placeholder="Votre taille"></textarea></label>
+  <ion-card>
+  <ion-card-content>
+    <p>Votre sexe est :</p>
+    <!-- <p>___________________________ </p>
+    <ion-icon name="female"></ion-icon>
+    <ion-checkbox color="primary"></ion-checkbox>
+    <ion-icon name="male"></ion-icon>
+    <ion-checkbox color="primary"></ion-checkbox>
+    <p>___________________________ </p> -->
+      <ion-row radio-group [(ngModel)]="sexe">
+        <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="male" ></ion-icon>Homme</ion-label>
+            <ion-radio value="homme"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label><ion-icon name="female"></ion-icon>Femme</ion-label>
+            <ion-radio value="femme"></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
     </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-content>
-         <p>Indiquez votre poid</p>
-        
-         <label type="text"><textarea placeholder="Votre poid"></textarea></label>
-        </ion-card-content>
-        </ion-card>
-
-        <h2> Votre objectif :</h2>
-        <p>Perte de poid</p>
-        <ion-checkbox color="primary"></ion-checkbox>
-        <p>Vegan</p>
-        <ion-checkbox color="primary"></ion-checkbox>
-        <p>Manger équilibré</p>
-        <ion-checkbox color="primary"></ion-checkbox>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <p>Indiquez votre âge</p>
+      <label type="text"><textarea placeholder="Votre âge"></textarea></label>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <p>Indiquez votre taille</p>
+      <label type="text"><textarea placeholder="Votre taille"></textarea></label>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <p>Indiquez votre poid</p>
+      <label type="text"><textarea placeholder="Votre poid"></textarea></label>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <h2> Votre objectif :</h2>
+    <ion-col>
+      <ion-list>
+        <ion-item style="background-color:DodgerBlue ">
+          <ion-label>Perte de poid</ion-label>
+          <ion-checkbox color="primary"></ion-checkbox>
+        </ion-item>
+        <ion-item style="background-color:DodgerBlue ">
+          <ion-label>Vegan</ion-label>
+          <ion-checkbox color="primary"></ion-checkbox>
+        </ion-item>
+        <ion-item style="background-color:DodgerBlue ">
+          <ion-label>Manger équilibré</ion-label>
+          <ion-checkbox color="primary"></ion-checkbox>
+        </ion-item>
         <div class="row">
-        <div class="col" >
-        <button ion-button text-center color="light" >Valider le profil</button>
+          <div class="col" >
+            <button ion-button text-center color="light" >Valider le profil</button>
+          </div>
         </div>
-        </div>
+      </ion-list>
+    </ion-col>   
+  </ion-grid>
 </ion-content>
