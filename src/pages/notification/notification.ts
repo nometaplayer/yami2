@@ -1,3 +1,4 @@
+import { ParametresPage } from './../parametres/parametres';
 import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 
@@ -14,4 +15,7 @@ export class NotificationPage {
     this.menuCtrl.open();
   }
 
+  enArriere() {
+    this.navCtrl.push(ParametresPage);
+  } 
 }

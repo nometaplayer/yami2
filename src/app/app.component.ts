@@ -1,3 +1,4 @@
+import { NotificationPage } from './../pages/notification/notification';
 import { LoginPage } from './../pages/login/login';
 import { GaleriePage } from './../pages/galerie/galerie';
 import { ContactPage } from './../pages/contact/contact';
@@ -42,6 +43,7 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Parametres', component: ParametresPage },
       { title: 'Stats', component: StatsPage },
+      { title: 'Notification', component : NotificationPage }
     ];
 
   }

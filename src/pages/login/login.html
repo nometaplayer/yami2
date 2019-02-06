@@ -1,16 +1,15 @@
 <ion-content padding center text-center>
 <ion-title>Yami</ion-title>
-<ion-list >
+<ion-list>
   <ion-item>
-    <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+    <ion-input placeholder="Nom d'utilisateur" [(ngModel)]="username"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+    <ion-input placeholder="Mot de passe" type="password" [(ngModel)]="password"></ion-input>
   </ion-item>
 </ion-list>
-
 <div *ngIf="isLoggedIn; else facebookLogin">
-  <h2>Hi, {{users.name}} ({{users.email}})</h2>
+  <h2>Bonjour, {{users.name}} ({{users.email}})</h2>
   <p>
     Gender : {{users.gender}}
   </p>
@@ -19,16 +18,23 @@
   </p>
   <p>
     <button ion-button icon-right (click)="logout()">
-      Logout
+      Se déconnecter
     </button>
   </p>
 </div>
 
-<button ion-button full (click)="login()">Log in</button>
-<button ion-button full color="light" (click)="goRegister()">Register</button>
+<button ion-button full (click)="login()">Se connecter</button>
+<button ion-button full color="light" (click)="goRegister()">S'enregistrer</button>
+                <ion-row>
+                    <ion-col col-3>
+                        <div style="margin:auto 16px;background-color:transparent;font-weight:400 !important;">
+                            Mot de passe oublié ?
+                        </div>
+                    </ion-col>
+                </ion-row>
   <ng-template #facebookLogin>
     <button ion-button icon-right (click)="loginfb()">
-      Login with 
+      Se connecter avec
       <ion-icon name="logo-facebook"></ion-icon>
     </button>  
   </ng-template>

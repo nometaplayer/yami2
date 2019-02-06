@@ -11,7 +11,7 @@ import { IntroPage } from '../pages/intro/intro';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { RegisterPage } from '../pages/register/register';
-
+import { IonicStorageModule } from '@ionic/storage';
 import { AbonnementPage } from '../pages/abonnement/abonnement';
 import { CguPage } from '../pages/cgu/cgu';
 import { ConseilPage } from '../pages/conseil/conseil';
@@ -40,14 +40,15 @@ import { RecettePage } from '../pages/galerie/recette/recette';
     FlyerPage,
     GaleriePage,
     HomePage,
-    NotificationPage,
     ParametresPage,
     StatsPage,
-    RecettePage
+    RecettePage,
+    NotificationPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -64,10 +65,10 @@ import { RecettePage } from '../pages/galerie/recette/recette';
     FlyerPage,
     GaleriePage,
     HomePage,
-    NotificationPage,
     ParametresPage,
     StatsPage,
-    RecettePage
+    RecettePage,
+    NotificationPage
   ],
   providers: [
     StatusBar,
