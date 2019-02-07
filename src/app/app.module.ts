@@ -26,6 +26,8 @@ import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
 
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
+import { ImagePage } from '../pages/image/image';
+import { VideoPage } from '../pages/video/video';
 @NgModule({
   declarations: [
     MyApp,
@@ -45,7 +47,9 @@ import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
     StatsPage,
     RecettePage,
     NotificationPage,
-    MdpOublierPage
+    MdpOublierPage,
+    ImagePage,
+    VideoPage
   ],
   imports: [
     BrowserModule,
@@ -71,7 +75,9 @@ import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
     StatsPage,
     RecettePage,
     NotificationPage,
-    MdpOublierPage
+    MdpOublierPage,
+    ImagePage,
+    VideoPage
   ],
   providers: [
     StatusBar,
