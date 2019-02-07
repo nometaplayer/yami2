@@ -15,7 +15,6 @@ import { ListPage } from '../pages/list/list';
 import { FlyerPage } from '../pages/flyer/flyer';
 import { ParametresPage } from '../pages/parametres/parametres';
 import { StatsPage } from '../pages/stats/stats';
-
 @Component({
   templateUrl: 'app.html'
 })

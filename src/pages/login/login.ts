@@ -1,3 +1,4 @@
+import { MdpOublierPage } from './../mdp-oublier/mdp-oublier';
 import { HomePage } from './../home/home';
 import { RegisterPage } from './../register/register';
 import { Component } from '@angular/core';
@@ -70,6 +71,10 @@ export class LoginPage {
 
   goRegister(){
     this.navCtrl.push(RegisterPage);
+  }
+
+  goMdpOublier(){
+    this.navCtrl.push(MdpOublierPage);
   }
 
 }

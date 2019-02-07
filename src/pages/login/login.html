@@ -26,11 +26,9 @@
 <button ion-button full (click)="login()">Se connecter</button>
 <button ion-button full color="light" (click)="goRegister()">S'enregistrer</button>
                 <ion-row>
-                    <ion-col col-3>
-                        <div style="margin:auto 16px;background-color:transparent;font-weight:400 !important;">
+                        <div style="margin:auto 16px;background-color:transparent;font-weight:400 !important;"  full (click)="goMdpOublier()">
                             Mot de passe oublié ?
                         </div>
-                    </ion-col>
                 </ion-row>
   <ng-template #facebookLogin>
     <button ion-button icon-right (click)="loginfb()">

@@ -25,6 +25,7 @@ import { Facebook } from '@ionic-native/facebook';
 import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
 
+import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +44,8 @@ import { RecettePage } from '../pages/galerie/recette/recette';
     ParametresPage,
     StatsPage,
     RecettePage,
-    NotificationPage
+    NotificationPage,
+    MdpOublierPage
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,8 @@ import { RecettePage } from '../pages/galerie/recette/recette';
     ParametresPage,
     StatsPage,
     RecettePage,
-    NotificationPage
+    NotificationPage,
+    MdpOublierPage
   ],
   providers: [
     StatusBar,
