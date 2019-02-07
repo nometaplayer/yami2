@@ -1,8 +1,10 @@
+import { VideoPage } from './../pages/video/video';
+import { ImagePage } from './../pages/image/image';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { Http } from '@angular/http';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
@@ -24,7 +26,6 @@ import { StatsPage } from '../pages/stats/stats';
 import { Facebook } from '@ionic-native/facebook';
 import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
-
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
 import { ImagePage } from '../pages/image/image';
 import { VideoPage } from '../pages/video/video';
@@ -84,6 +85,7 @@ import { VideoPage } from '../pages/video/video';
     SplashScreen,
     Facebook,
     RecetteService,
+    Http,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
