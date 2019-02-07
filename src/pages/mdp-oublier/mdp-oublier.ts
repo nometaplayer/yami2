@@ -1,6 +1,6 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
 
 @Component({
   selector: 'page-mdp-oublier',
@@ -13,6 +13,10 @@ export class MdpOublierPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MdpOublierPage');
+  }
+
+  enArriere(){
+    this.navCtrl.push(LoginPage);
   }
 
 }
