@@ -15,6 +15,7 @@ import { ListPage } from '../pages/list/list';
 import { FlyerPage } from '../pages/flyer/flyer';
 import { ParametresPage } from '../pages/parametres/parametres';
 import { StatsPage } from '../pages/stats/stats';
+import { VideoPage } from '../pages/video/video';
 @Component({
   templateUrl: 'app.html'
 })
@@ -42,7 +43,8 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Parametres', component: ParametresPage },
       { title: 'Stats', component: StatsPage },
-      { title: 'Notification', component : NotificationPage }
+      { title: 'Notification', component : NotificationPage },
+      { title: 'Video', component : VideoPage }
     ];
 
   }

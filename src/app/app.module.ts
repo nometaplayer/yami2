@@ -1,5 +1,3 @@
-import { VideoPage } from './../pages/video/video';
-import { ImagePage } from './../pages/image/image';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -29,6 +27,9 @@ import { RecettePage } from '../pages/galerie/recette/recette';
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
 import { ImagePage } from '../pages/image/image';
 import { VideoPage } from '../pages/video/video';
+
+import { IonicImageViewerModule } from 'ionic-img-viewer';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -56,6 +57,7 @@ import { VideoPage } from '../pages/video/video';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
