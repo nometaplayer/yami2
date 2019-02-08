@@ -1,24 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
+import { PhotoViewerOriginal } from '@ionic-native/photo-viewer';
 
-/**
- * Generated class for the VideoPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-video',
   templateUrl: 'video.html',
 })
 export class VideoPage {
+  img: string;
+  images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
+  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public menuCtrl: MenuController,
+              private photoViewer: PhotoViewerOriginal) {
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad VideoPage');
+  onToggleMenu() {
+    this.menuCtrl.open();
   }
-
+  /* lookImg(value){
+    this.photoViewer.show(value,'', {share: true});
+  } */
 }

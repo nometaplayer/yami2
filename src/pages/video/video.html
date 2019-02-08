@@ -1,12 +1,39 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>video</ion-title>
+    <ion-title>Galerie photo</ion-title>
+    <ion-buttons start >
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
-
-
+ 
 <ion-content padding>
+  <ion-segment [(ngModel)]="galleryType" color="primary">
+    <ion-segment-button value="grille">
+      Grille
+    </ion-segment-button>
+    <ion-segment-button value="liste">
+      Liste
+    </ion-segment-button>
+  </ion-segment>
 
+  <div [ngSwitch]="galleryType">
+    <ion-grid *ngSwitchCase="'grille'">
+      <ion-row>
+        <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of images">
+          <div class="image-container" [style.background-image]="'url(assets/imgs/' + image +')'" ></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-grid *ngSwitchCase="'liste'">
+      <ion-slides class="image-slider" loop="true" slidesPerView="2" effect="coverflow">
+        <ion-slide *ngFor="let img of images">
+          <img src="assets/imgs/{{img}}" class="thumb-img" imageViewer/>
+        </ion-slide>
+      </ion-slides>
+    </ion-grid>
+  </div>  
 </ion-content>

@@ -1,5 +1,3 @@
-import { VideoPage } from './../pages/video/video';
-import { ImagePage } from './../pages/image/image';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -28,6 +26,9 @@ import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
 import * as ionicGalleryModal from 'ionic-gallery-modal';
+import { ImagePage } from '../pages/image/image';
+import { VideoPage } from '../pages/video/video';
+import { IonicImageViewerModule } from 'ionic-img-viewer';
 @NgModule({
   declarations: [
     MyApp,
@@ -55,7 +56,8 @@ import * as ionicGalleryModal from 'ionic-gallery-modal';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    ionicGalleryModal.GalleryModalModule
+    ionicGalleryModal.GalleryModalModule,
+    IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
