@@ -25,10 +25,10 @@ import { Facebook } from '@ionic-native/facebook';
 import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
-import { ImagePage } from '../pages/image/image';
 import { VideoPage } from '../pages/video/video';
 
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { VideovraiPage } from '../pages/videovrai/videovrai';
 
 @NgModule({
   declarations: [
@@ -50,8 +50,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     RecettePage,
     NotificationPage,
     MdpOublierPage,
-    ImagePage,
-    VideoPage
+    VideoPage,
+    VideovraiPage
   ],
   imports: [
     BrowserModule,
@@ -79,8 +79,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     RecettePage,
     NotificationPage,
     MdpOublierPage,
-    ImagePage,
-    VideoPage
+    VideoPage,
+    VideovraiPage
   ],
   providers: [
     StatusBar,

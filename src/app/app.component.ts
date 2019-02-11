@@ -16,6 +16,7 @@ import { FlyerPage } from '../pages/flyer/flyer';
 import { ParametresPage } from '../pages/parametres/parametres';
 import { StatsPage } from '../pages/stats/stats';
 import { VideoPage } from '../pages/video/video';
+import { VideovraiPage } from '../pages/videovrai/videovrai';
 @Component({
   templateUrl: 'app.html'
 })
@@ -32,10 +33,11 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
       { title: 'Intro', component: IntroPage },
       { title: 'Abonnement', component: AbonnementPage },
       { title: 'CGU', component: CguPage },
+      { title: 'Galerie d\'image', component : VideoPage },
+      { title: 'Galerie de video', component : VideovraiPage },
       { title: 'Conseil', component: ConseilPage },
       { title: 'Contact', component: ContactPage },
       { title: 'Flyer', component: FlyerPage },
@@ -44,7 +46,7 @@ export class MyApp {
       { title: 'Parametres', component: ParametresPage },
       { title: 'Stats', component: StatsPage },
       { title: 'Notification', component : NotificationPage },
-      { title: 'Video', component : VideoPage }
+      
     ];
 
   }

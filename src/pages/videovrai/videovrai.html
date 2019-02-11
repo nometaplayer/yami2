@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Video</ion-title>
+    <ion-buttons start >
+      <button ion-button icon-only (click)="onToggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-md-4 col-xl-3 *ngFor="let video of vid">
+          <ion-card-header>
+            <ion-card-title>
+              <h1>{{video.title}}</h1>
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <iframe [src]="sanitize(video.link)" frameborder="0" allowfullscreen></iframe>
+          </ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
