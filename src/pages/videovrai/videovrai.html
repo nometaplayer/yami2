@@ -10,11 +10,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background:#56a3da !important;">
   <div>
     <ion-grid>
       <ion-row>
-        <ion-col col-md-4 col-xl-3 *ngFor="let video of vid">
+        <ion-col *ngFor="let video of vid">
           <ion-card-header>
             <ion-card-title>
               <h1>{{video.title}}</h1>
