@@ -25,10 +25,18 @@ import { Facebook } from '@ionic-native/facebook';
 import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
+<<<<<<< HEAD
 import * as ionicGalleryModal from 'ionic-gallery-modal';
 import { ImagePage } from '../pages/image/image';
+=======
+>>>>>>> master
 import { VideoPage } from '../pages/video/video';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+<<<<<<< HEAD
+=======
+import { VideovraiPage } from '../pages/videovrai/videovrai';
+
+>>>>>>> master
 @NgModule({
   declarations: [
     MyApp,
@@ -49,8 +57,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     RecettePage,
     NotificationPage,
     MdpOublierPage,
-    ImagePage,
-    VideoPage
+    VideoPage,
+    VideovraiPage
   ],
   imports: [
     BrowserModule,
@@ -79,8 +87,8 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     RecettePage,
     NotificationPage,
     MdpOublierPage,
-    ImagePage,
-    VideoPage
+    VideoPage,
+    VideovraiPage
   ],
   providers: [
     StatusBar,
