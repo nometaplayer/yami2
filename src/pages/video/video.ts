@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
-import { PhotoViewerOriginal } from '@ionic-native/photo-viewer';
-
 
 @Component({
   selector: 'page-video',
@@ -15,7 +13,7 @@ export class VideoPage {
 
   constructor(public navCtrl: NavController,
               public menuCtrl: MenuController,
-              private photoViewer: PhotoViewerOriginal) {
+              ) {
   }
   onToggleMenu() {
     this.menuCtrl.open();
