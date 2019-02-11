@@ -7,7 +7,9 @@ import { MenuController } from 'ionic-angular/components/app/menu-controller';
   templateUrl: 'video.html',
 })
 export class VideoPage {
-  img: string;
+  
+  galleryType='grille';
+  value: string;
   images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg'];
   
 
@@ -18,7 +20,4 @@ export class VideoPage {
   onToggleMenu() {
     this.menuCtrl.open();
   }
-  /* lookImg(value){
-    this.photoViewer.show(value,'', {share: true});
-  } */
 }
