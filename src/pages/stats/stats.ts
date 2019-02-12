@@ -1,24 +1,22 @@
-import { Stat } from './data/data.interface';
-import { Component } from '@angular/core';
+import { Stats } from '../../Models/data.interface';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, MenuController } from 'ionic-angular';
-import stats from "./data/data"
+import stats from "../services/data.services";
 
 @Component({
   selector: 'page-stats',
   templateUrl: 'stats.html',
 })
-export class StatsPage {
-  stats: any=stats;
-  randomStats: any=[];
+export class StatsPage implements OnInit {
+  stats: Stats[];
+  randomStats: Stats[];
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public menuCtrl: MenuController) {
-                this.stats=stats.stats;
-                this.randomStats=stats.stats;
-      
+              public menuCtrl: MenuController) { }
+  ngOnInit(){
+    this.stats = stats.stats;
   }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad StatsPage');
     console.log(this.stats);
@@ -26,8 +24,8 @@ export class StatsPage {
   onToggleMenu() {
     this.menuCtrl.open();
   }
-  randomStat() {
-    let rs = Math.floor(Math.random() * this.stats.length);
-    this.randomStats = [this.stats[rs]];
+  getRandom() {
+    let rd = Math.floor(Math.random() *this.stats.length);
+    this.randomStats = [this.stats[rd]];
   }
 }
