@@ -1,5 +1,6 @@
+import { VideovraiPage } from './../pages/videovrai/videovrai';
 import { LoginPage } from './../pages/login/login';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Http } from '@angular/http';
@@ -25,11 +26,10 @@ import { Facebook } from '@ionic-native/facebook';
 import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
+import * as ionicGalleryModal from 'ionic-gallery-modal';
+import { ImagePage } from '../pages/image/image';
 import { VideoPage } from '../pages/video/video';
-
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-import { VideovraiPage } from '../pages/videovrai/videovrai';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -57,6 +57,7 @@ import { VideovraiPage } from '../pages/videovrai/videovrai';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
+    ionicGalleryModal.GalleryModalModule,
     IonicImageViewerModule
   ],
   bootstrap: [IonicApp],
@@ -88,7 +89,11 @@ import { VideovraiPage } from '../pages/videovrai/videovrai';
     Facebook,
     RecetteService,
     Http,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: ionicGalleryModal.GalleryModalHammerConfig
+    }
   ]
 })
 export class AppModule {}

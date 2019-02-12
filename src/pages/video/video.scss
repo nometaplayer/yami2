@@ -1,4 +1,11 @@
 page-video {
+    background: #210405;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+
     .image-container{
         min-height: 100px;
         background-size: cover;
@@ -10,6 +17,6 @@ page-video {
     }
 
     .slide-zoom{
-        background: #e6e6e6;
+        background: #000000;
     }
 }
