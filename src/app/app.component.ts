@@ -47,12 +47,8 @@ export class MyApp {
       { title: 'Parametres', component: ParametresPage },
       { title: 'Stats', component: StatsPage },
       { title: 'Notification', component : NotificationPage },
-<<<<<<< HEAD
       { title: 'Image', component : ImagePage },
       { title: 'Video', component : VideoPage }
-=======
-      
->>>>>>> master
     ];
 
   }

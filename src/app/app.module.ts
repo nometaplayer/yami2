@@ -1,3 +1,4 @@
+import { VideovraiPage } from './../pages/videovrai/videovrai';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -25,18 +26,10 @@ import { Facebook } from '@ionic-native/facebook';
 import { RecetteService } from '../pages/services/recette.services';
 import { RecettePage } from '../pages/galerie/recette/recette';
 import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
-<<<<<<< HEAD
 import * as ionicGalleryModal from 'ionic-gallery-modal';
 import { ImagePage } from '../pages/image/image';
-=======
->>>>>>> master
 import { VideoPage } from '../pages/video/video';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-<<<<<<< HEAD
-=======
-import { VideovraiPage } from '../pages/videovrai/videovrai';
-
->>>>>>> master
 @NgModule({
   declarations: [
     MyApp,
