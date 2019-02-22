@@ -2,10 +2,10 @@
 <ion-title>Yami</ion-title>
 <ion-list>
   <ion-item>
-    <ion-input placeholder="Nom d'utilisateur" [(ngModel)]="username"></ion-input>
+    <ion-input placeholder="Nom d'utilisateur" [(ngModel)]="username" value=""></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input placeholder="Mot de passe" type="password" [(ngModel)]="password"></ion-input>
+    <ion-input placeholder="Mot de passe" type="password" [(ngModel)]="password" value=""></ion-input>
   </ion-item>
 </ion-list>
 <div *ngIf="isLoggedIn; else facebookLogin">
