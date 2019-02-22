@@ -13,8 +13,19 @@
 
 
 <ion-content padding>
+  <ion-grid>
+    <ion-list>
+      <ion-item>
+        <ion-label fixed>Number</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="num"></ion-input>
+      </ion-item>
 
-<h3>-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae scelerisque ex. Morbi pulvinar tortor eu cursus pretium. Donec at purus in metus vehicula ullamcorper. Mauris dolor neque, pharetra non leo a, suscipit iaculis justo. Cras a blandit nunc. Nam.</h3>
-<h3>-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus augue tellus, vitae interdum lectus tempor quis. Quisque vestibulum faucibus consequat. Proin tempor ultricies massa eu semper. Nullam tellus lacus, vehicula vitae molestie sit amet, sagittis vulputate justo. Nullam bibendum.</h3>
-<h3>-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis facilisis nisi. Mauris sodales eros odio, efficitur eleifend nibh finibus ac. Etiam ipsum lacus, dapibus id egestas eget, tincidunt a eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin sodales ligula ut nibh accumsan pharetra. Sed commodo pharetra neque non commodo. Praesent vulputate sed odio eget imperdiet.</h3>
+      <ion-item>
+        <button ion-button (click)="scan()">Button</button>
+      </ion-item>
+    </ion-list>>
+  </ion-grid>
+  <h3>-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae scelerisque ex. Morbi pulvinar tortor eu cursus pretium. Donec at purus in metus vehicula ullamcorper. Mauris dolor neque, pharetra non leo a, suscipit iaculis justo. Cras a blandit nunc. Nam.</h3>
+  <h3>-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus augue tellus, vitae interdum lectus tempor quis. Quisque vestibulum faucibus consequat. Proin tempor ultricies massa eu semper. Nullam tellus lacus, vehicula vitae molestie sit amet, sagittis vulputate justo. Nullam bibendum.</h3>
+  <h3>-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis facilisis nisi. Mauris sodales eros odio, efficitur eleifend nibh finibus ac. Etiam ipsum lacus, dapibus id egestas eget, tincidunt a eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin sodales ligula ut nibh accumsan pharetra. Sed commodo pharetra neque non commodo. Praesent vulputate sed odio eget imperdiet.</h3>
 </ion-content>
