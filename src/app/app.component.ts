@@ -45,7 +45,6 @@ export class MyApp {
       { title: 'Parametres', component: ParametresPage },
       { title: 'Stats', component: StatsPage },
       { title: 'Notification', component : NotificationPage },
-      
     ];
 
   }
