@@ -29,6 +29,7 @@ import { MdpOublierPage } from '../pages/mdp-oublier/mdp-oublier';
 import * as ionicGalleryModal from 'ionic-gallery-modal';
 import { VideoPage } from '../pages/video/video';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 @NgModule({
   declarations: [
     MyApp,
@@ -88,6 +89,7 @@ import { IonicImageViewerModule } from 'ionic-img-viewer';
     Facebook,
     RecetteService,
     Http,
+    BarcodeScanner,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     {
       provide: HAMMER_GESTURE_CONFIG,
