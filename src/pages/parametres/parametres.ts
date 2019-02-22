@@ -1,3 +1,4 @@
+import { ContactPage } from './../contact/contact';
 import { Component } from '@angular/core';
 import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { IntroPage } from '../intro/intro';
@@ -26,7 +27,8 @@ export class ParametresPage {
     if(num==0)this.navCtrl.push(IntroPage);
     if(num==1)this.navCtrl.push(CguPage);
     if(num==2)this.navCtrl.push(NotificationPage);
-
+    if(num==3)this.navCtrl.push(ContactPage);
+    if(num==4)this.navCtrl.push(ContactPage);
   }
   onToggleMenu() {
     this.menuCtrl.open();

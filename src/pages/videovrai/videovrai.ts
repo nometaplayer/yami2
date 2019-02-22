@@ -3,13 +3,6 @@ import { NavController, NavParams } from 'ionic-angular';
 import { MenuController } from 'ionic-angular/components/app/menu-controller';
 import { DomSanitizer } from '@angular/platform-browser';
 
-/**
- * Generated class for the VideovraiPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: 'page-videovrai',
   templateUrl: 'videovrai.html',

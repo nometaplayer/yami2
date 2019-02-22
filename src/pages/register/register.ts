@@ -31,4 +31,6 @@ export class RegisterPage {
     alert("Le mot de passe est différent avec ça confirmation.");
   }
 
+ 
+
 }
