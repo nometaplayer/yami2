@@ -2,7 +2,7 @@ import { MdpOublierPage } from './../mdp-oublier/mdp-oublier';
 import { HomePage } from './../home/home';
 import { RegisterPage } from './../register/register';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 
 @Component({
@@ -17,7 +17,7 @@ export class LoginPage {
   isLoggedIn:boolean = false;
   users: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: Facebook) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController, private fb: Facebook) {
   
 
   fb.getLoginStatus()
@@ -75,6 +75,10 @@ export class LoginPage {
 
   goMdpOublier(){
     this.navCtrl.push(MdpOublierPage);
+  }
+
+  onToggleMenu(){
+    this.menuCtrl.open();
   }
 
 }

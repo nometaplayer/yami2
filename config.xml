@@ -86,10 +86,10 @@
         <variable name="APP_ID" value="1497690080503429" />
         <variable name="APP_NAME" value="ItsOpen" />
     </plugin>
-    <engine name="android" spec="7.1.4" />
-    <engine name="ios" spec="4.5.5" />
     <plugin name="cordova-plugin-file" spec="6.0.1" />
     <plugin name="cordova-plugin-photo-library" spec="2.2.1">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value=" " />
     </plugin>
+    <engine name="android" spec="7.1.4" />
+    <engine name="ios" spec="4.5.5" />
 </widget>

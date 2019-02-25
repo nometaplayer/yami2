@@ -44,7 +44,6 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Parametres', component: ParametresPage },
       { title: 'Stats', component: StatsPage },
-      { title: 'Notification', component : NotificationPage },
     ];
 
   }
