@@ -54,12 +54,8 @@
     "ionic-gallery-modal": "^0.2.7",
     "ionic-img-viewer": "^2.9.0",
     "ionicons": "3.0.0",
-<<<<<<< HEAD
     "phonegap-plugin-barcodescanner": "^8.0.1",
     "plugin": "^0.3.3",
-=======
-    "phonegap-plugin-barcodescanner": "8.0.1",
->>>>>>> d56e03891ce5a52aa184d1642806ac2f759573cb
     "rxjs": "5.5.11",
     "rxjs-compat": "^6.4.0",
     "sw-toolbox": "3.6.0",

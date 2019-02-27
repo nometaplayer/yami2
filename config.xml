@@ -90,10 +90,6 @@
     <plugin name="cordova-plugin-photo-library" spec="2.2.1">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value=" " />
     </plugin>
-<<<<<<< HEAD
-=======
-    <plugin name="phonegap-plugin-barcodescanner" spec="8.0.1" />
->>>>>>> d56e03891ce5a52aa184d1642806ac2f759573cb
     <engine name="android" spec="7.1.4" />
     <engine name="ios" spec="4.5.5" />
 </widget>
